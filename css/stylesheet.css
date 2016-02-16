@@ -4859,64 +4859,60 @@ header {
   background-color: #fff;
   padding: 20px;
   position: relative; }
-  header ul {
-    margin: 0;
-    padding: 0; }
 
 .content {
   padding: 40px 0; }
 
 aside {
-  background-color: #fff; }
+  background-color: #fff;
+  min-width: 278px; }
   @media (max-width: 991px) {
     aside {
       background: pink; } }
   aside .title {
-    background-color: #72847f;
-    color: #fff;
-    padding: 10px 15px;
+    padding: 20px 25px;
     position: relative; }
     aside .title * {
       font-size: 1.2rem;
       margin: 0; }
-    aside .title:after {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 0;
-      width: 0;
-      border-top: 15px solid #72847f;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      bottom: -15px; }
   aside nav {
-    padding: 20px 15px 10px; }
+    padding: 20px 25px; }
     aside nav *:last-child {
       margin: 0; }
 
-.font-example {
-  border-bottom: solid 1px #ccc;
+main {
+  background-color: #fff;
   padding: 20px; }
+
+.font-example {
+  padding: 20px; }
+  .font-example + .font-example {
+    border-top: solid 1px #dedede; }
   .font-example *:first-child {
     margin-top: 0; }
   .font-example *:last-child {
     margin-bottom: 0; }
+  .font-example .text-muted {
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1px; }
 
-.fixed-menu {
-  background-color: #fff;
-  border-left: solid 1px #ccc;
+.scroll-top {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 40px;
+  cursor: pointer;
+  display: none;
+  padding: 7px 15px;
   position: fixed;
-  right: 0;
-  height: 100vh;
-  text-align: center;
-  width: 60px;
-  z-index: 9999; }
-  .fixed-menu .item {
-    border-bottom: solid 1px #ccc;
-    padding: 5px; }
-  .fixed-menu .icon-lbl {
-    display: block;
-    font-size: 0.7rem;
-    margin-top: 5px; }
+  right: 40px; }
+
+.ng-move, .ng-enter, .ng-leave {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
+
+.ng-leave.ng-leave-active, .ng-move, .ng-enter {
+  opacity: 0; }
+
+.ng-leave, .ng-move.ng-move-active, .ng-enter.ng-enter-active {
+  opacity: 1; }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -3,32 +3,42 @@
     <head>
         <title>Dem Fonts</title>
         
+        <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/stylesheet.css" />
         <link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="app/main.js"></script>
+        <script src="js/functions.js"></script>
     </head>
     
     <body>
         
-        <div class="fixed-menu">
-            <div class="item">
-                <i class="icon fa fa-search"></i>
-                <span class="icon-lbl uppercase">Search</span>
-            </div>
-        </div>
+        <header>
+            <p class="text-xs-center m-b-0"><i class="fa fa-fort-awesome"></i></p>
+        </header>
         
-        <div class="content">
+        <div ng-app="myApp" ng-controller="fontsCtrl" class="content">
             <div class="container">
                 <div class="col-md-3">
-                    <aside>
+                    <aside class="m-b-1">
                         <div class="title">
-                            <h3>Sup</h3>
+                            <h3>Fontz</h3>
                         </div>
                         
                         <nav>
                             <ul class="list-unstyled">
-                                <li><a href="http://blog.typekit.com/2016/02/12/choosing-and-pairing-typefaces-for-cookbooks/" target="_blank">Bitchtits</a></li>
+                                <li><a ng-click="fontFilter = {type: 'Google'}" href="javascript:void(0)">Google Fonts</a></li>
+                                <li class="m-b-1"><a ng-click="fontFilter = {type: 'Local'}" href="javascript:void(0)">Local Fonts</a></li>
+                                <li><a ng-click="fontFilter = {}" href="javascript:void(0)">Show All</a></li>
                             </ul>
+                            
+                            <input type="text" placeholder="Search" class="form-control m-b-1" ng-model="fontFilter.name" />
                         </nav>
                     </aside>
                 </div>
@@ -36,105 +46,23 @@
                 <div class="col-md-9">
                     <main>
                         <section>
-                            <div class="font-example font-amaranth">
-                                <h2>Amaranth</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
+                            
+                            <div ng-animate="'animate'" ng-repeat="font in fonts | orderBy:'name' | filter:fontFilter" class="font-example font-{{ font.class }}">
+                                <h2>{{ font.name }}</h2>
+                                <h3>{{ font.name | uppercase }}</h3>
+                                <p>{{ content }}</p>
+                                <small class="text-muted uppercase"><strong>Type:</strong> {{ font.type }}</small>
                             </div>
                             
-                            <div class="font-example font-amaranth-bold">
-                                <h2>Amaranth Bold</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-born uppercase">
-                                <h2>Born</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-light">
-                                <h2>Butler Light</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-medium">
-                                <h2>Butler Medium</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-black">
-                                <h2>Butler Black</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-bold">
-                                <h2>Butler Bold</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-stencil">
-                                <h2>Butler Stencil</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-hero">
-                                <h2>Hero</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-hero-light">
-                                <h2>Hero Light</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-jura">
-                                <h2>Jura</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-jura-bold uppercase">
-                                <h2>Jura Bold</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-karla">
-                                <h2>Karla</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-spartan">
-                                <h2>League Spartan</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-montserrat-regular">
-                                <h2>Montserrat Regular</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-quark-bold">
-                                <h2>Quark Bold</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-quark-light">
-                                <h2>Quark Light</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example butler-black">
-                                <h2>Butler Black</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
-                            
-                            <div class="font-example font-butler-stencil-extra-bold">
-                                <h2>Butler Stencil Extra Bold</h2>
-                                <p>Lorem ipsum dolor sit amet and that.</p>
-                            </div>
                         </section>
                     </main>
                 </div>
             </div>
         </div>
+        
+        <a class="scroll-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
         
     </body>
 </html>
