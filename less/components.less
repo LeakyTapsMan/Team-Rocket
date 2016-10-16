@@ -1,0 +1,59 @@
+.contact-intro {
+    padding-bottom: 9rem;
+}
+
+.contact-info-container {
+    z-index: 20 !important;
+}
+
+.contact-info {
+
+    background-color: #fff;
+    left: 50%;
+    max-width: 1140px;
+    position: absolute;
+    top: 50%;
+    .transform(translateX(-50%) translateY(-50%));
+    width: 100%;
+
+    .info {
+
+        border-right: solid 1px @color-bg-primary;
+        min-height: 235px;
+
+        &.last {
+            border-right: none;
+        }
+
+    }
+
+    .info-dtl {
+        color: #666;
+    }
+
+}
+
+.testimonials {
+
+    .carousel-control {
+        background-image: none;
+        color: @color-brand-secondary;
+    }
+
+    .carousel-indicators {
+
+        bottom: -50px;
+
+        li {
+
+            border-color: @color-border-light;
+
+            &.active {
+                background-color: @color-brand-secondary;
+            }
+
+        }
+
+    }
+
+}

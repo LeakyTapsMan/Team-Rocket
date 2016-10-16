@@ -1,0 +1,64 @@
+.swiper-container {
+    max-height: 1000px;
+    width: 100%;
+}
+
+.swiper-scrollbar {
+    display: none;
+}
+
+/* Pagination */
+.swiper-pagination {
+    position: relative;
+}
+
+.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+    background: none;
+    font-family: 'Lora', serif;
+    height: auto;
+    margin: 0 10px;
+    width: auto;
+}
+
+.swiper-pagination-bullet {
+    color: @color-text-tertiary;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    color: @color-text-primary;
+}
+
+/* Next/Previous Arrows */
+.swiper-btn-next, .swiper-btn-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    opacity: .3;
+    .transition(all .3s ease);
+
+    &:hover {
+        opacity: 1;
+        .transition(all .3s ease);
+    }
+}
+
+.swiper-btn-next {
+    left: auto;
+    right: 10px;
+}
+
+.swiper-btn-prev {
+    left: 10px;
+    right: auto;
+}

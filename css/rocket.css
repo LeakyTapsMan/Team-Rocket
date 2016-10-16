@@ -1,0 +1,42 @@
+#rocket * {
+  transition: all 1400ms ease-in;
+}
+#rocket {
+  height: 320px;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+}
+#rocket:hover {
+  background-color: #2e3c42;
+}
+#rocket:hover .rocket-body {
+  transform: translateY(-200px);
+}
+#rocket:hover .tank {
+  transform: translate(100px, 500px) rotate(30deg);
+}
+#rocket:hover .thruster-1 {
+  transform: translate(-300px, 800px) rotate(-60deg);
+}
+#rocket:hover .thruster-2 {
+  transform: translate(400px, 800px) rotate(60deg);
+}
+#rocket:hover .s-star {
+  animation: starTranslate 14s infinite linear;
+}
+#rocket:hover .x-star {
+  animation: starTranslate 7s infinite linear;
+}
+.thruster-1,
+.thruster-2,
+.tank {
+  transform: rotate(0deg);
+}
+@keyframes starTranslate {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(300px);
+  }
+}

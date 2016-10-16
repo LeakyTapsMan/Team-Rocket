@@ -1,21 +1,31 @@
-// Scroll to top
+// Smooth scroll to top
 $(function() {
-    
-    var scrollTopBtn = $(".scroll-top");
-    
-    // Fade in/out button based on screen position
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            scrollTopBtn.fadeIn();
-        }
-        else {
-            scrollTopBtn.fadeOut();
-        }
+
+    $("a.smooth-scroll").click(function(){
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+
     });
-    
-    // Smooth scroll on button press
-    scrollTopBtn.click(function() {
-       $("html, body").animate({ scrollTop: 0 }, 500); 
-    });
-    
+
+});
+
+$(window).scroll(function () {
+
+    /* Check the location of each desired element */
+    $('.fadeIn').each(function (i) {
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if (bottom_of_window > bottom_of_object) {
+
+            $(this).animate({
+                'opacity': '1'
+            }, 500);
+
+         }
+     });
 });

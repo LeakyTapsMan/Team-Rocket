@@ -1,0 +1,56 @@
+.btn-bg(@background, @color) {
+
+    background-color:   @background;
+    border-color:       @background;
+    color:              @color;
+
+    &:hover, &:focus {
+        background-color: darken(@background, 10%);
+        border-color: darken(@background, 10%);
+        color: @color;
+    }
+
+    &:active, &:active:focus {
+        background-color: darken(@background, 20%);
+        border-color: darken(@background, 20%);
+        color: @color;
+    }
+
+}
+
+.btn {
+    .border-radius(2px);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: .5rem 1.2rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    .btn-bg(hsla(82,14%,70%,.5), @color-text-primary);
+}
+
+.btn-icon {
+
+    padding-right: 30px;
+
+    &:after {
+        font-family: "FontAwesome", sans-serif;
+        font-weight: 400;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        .transform(translateY(-50%));
+    }
+
+}
+
+.btn-arrow {
+
+    &:after {
+        content: "\f105";
+    }
+
+}

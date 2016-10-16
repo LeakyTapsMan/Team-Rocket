@@ -1,0 +1,41 @@
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+.filter(@type) {
+    -webkit-filter:     @type;
+    filter:             @type;
+}
+
+.transform(@string){
+	-webkit-transform: 	 @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+	transition:			@transition;
+}
+
+// PX to REM - Usage: font-size: rem(37px);
+.rem(@px, @base: @base-font-size) {
+    @base-font-size: (@px / @base) * 1rem;
+}
+
+// Opacity - Usage: @include opacity(0.8);
+.opacity(@opacity) {
+    opacity: @opacity;
+    @opacity-ie: @opacity * 100;
+    filter: alpha(opacity=@opacity-ie);
+}
