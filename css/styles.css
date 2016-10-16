@@ -112,6 +112,9 @@
 .text-muted {
   color: #666;
 }
+.text-lg {
+  font-size: 1.5rem;
+}
 .fadeIn {
   opacity: 0;
 }
