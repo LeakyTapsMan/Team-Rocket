@@ -10,6 +10,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css" />
 
         <!-- Fonts -->
@@ -52,15 +53,51 @@
 
         <main class="wrapper">
 
-            <section class="module bg-off-white p-y-4">
-                <div class="container">
-                    <h2 class="section-title title-rule">Get in touch</h2>
+            <section class="module contact-form bg-white p-y-4">
+                <div class="container container-alt">
+                    
+                    <div class="multi-title m-b-2">
+                        <h2 class="bg-title">Contact Us</h2>
+                        <h1 class="fg-title title-rule">Get in touch</h1>
+                    </div>
 
-                    <form action="https://formspree.io/conal.shaul@gmail.com" method="POST">
-                        <input type="text" name="name">
-                        <input type="email" name="_replyto">
-                        <input type="submit" value="Send">
+                    <form action="#" method="POST">
+
+                        <div class="form-group m-b-3">
+                            <label class="montserrat font-weight-bold" for="form-help">How can we help you?</label>
+                            <input type="text" class="form-control form-control-lg" id="form-help" aria-describedby="form-help" placeholder="Tell us about the problem you need to solve.">
+                        </div>
+
+                        <div class="form-group m-b-3">
+                            <label class="montserrat font-weight-bold" for="form-budget">Please share your timeline &amp; budget.</label>
+                            <input type="text" class="form-control form-control-lg" id="form-budget" aria-describedby="form-budget" placeholder="The more we know, the more we can help">
+                        </div>
+
+                        <div class="form-group m-b-3">
+                            <label class="montserrat font-weight-bold" for="form-contact">How can we contact you?</label>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="text" class="form-control form-control-lg m-b-1" id="form-contact" aria-describedby="form-contact" placeholder="First & Last Name">
+                                </div>
+
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="text" class="form-control form-control-lg m-b-1" placeholder="Phone Number">
+                                </div>
+
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="email" class="form-control form-control-lg m-b-1" placeholder="Email Address">
+                                </div>
+
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="text" class="form-control form-control-lg m-b-1" placeholder="Company Name or Organisation">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-primary btn-lg btn-icon btn-arrow" type="submit">Send</a>
                     </form>
+
                 </div>
             </section>
 
@@ -102,8 +139,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTu8Am2BFyRO8jFprLH7RQyRwA9Lvvi0"></script>
-        <!--<script src="https://use.fontawesome.com/d67550b28c.js"></script>-->
         <script src="js/functions.js"></script>
         <script src="js/map.js"></script>
 

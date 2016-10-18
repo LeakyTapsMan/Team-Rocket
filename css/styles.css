@@ -55,6 +55,10 @@
 .testimonials .carousel-indicators li.active {
   background-color: #161d27;
 }
+.contact-form input {
+  background-color: #f5f9fc;
+  border: solid 1px #a7bfda;
+}
 /* Titles */
 .title-rule {
   display: table;
@@ -118,6 +122,12 @@
 .fadeIn {
   opacity: 0;
 }
+.montserrat {
+  font-family: 'Montserrat Light', sans-serif;
+}
+.container-alt {
+  max-width: 800px;
+}
 /* Bootstrap Overrides */
 .p-y-4 {
   padding-bottom: 4rem;
@@ -138,32 +148,56 @@
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-size: 12px;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: .8rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   padding: .5rem 1.2rem;
   position: relative;
-  text-transform: uppercase;
+}
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
 }
 .btn-primary {
-  background-color: rgba(181, 189, 168, 0.5);
-  border-color: rgba(181, 189, 168, 0.5);
-  color: #414141;
+  background-color: #e84e0e;
+  border-color: #e84e0e;
+  color: #ffffff;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: rgba(157, 167, 139, 0.5);
-  border-color: rgba(157, 167, 139, 0.5);
-  color: #414141;
+  background-color: #b83e0b;
+  border-color: #b83e0b;
+  color: #ffffff;
 }
 .btn-primary:active,
 .btn-primary:active:focus {
-  background-color: rgba(132, 145, 110, 0.5);
-  border-color: rgba(132, 145, 110, 0.5);
-  color: #414141;
+  background-color: #882e08;
+  border-color: #882e08;
+  color: #ffffff;
+}
+.btn-primary {
+  background-color: #161d27;
+  border-color: #161d27;
+  color: #ffffff;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #040506;
+  border-color: #040506;
+  color: #ffffff;
+}
+.btn-primary:active,
+.btn-primary:active:focus {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
 }
 .btn-icon {
   padding-right: 30px;
+}
+.btn-icon.btn-lg {
+  padding-right: 45px;
 }
 .btn-icon:after {
   font-family: "FontAwesome", sans-serif;
@@ -420,6 +454,25 @@ ul {
 .section-title span {
   color: #e84e0e;
 }
+.multi-title {
+  position: relative;
+}
+.bg-title {
+  color: #eeeeee;
+  font-size: 96px;
+  line-height: 96px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.fg-title {
+  color: #161d27;
+  display: table;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 auto;
+  position: relative;
+  top: -64px;
+}
 .title {
   font-size: 3.6rem;
 }
@@ -432,4 +485,7 @@ ul {
 .module {
   position: relative;
   z-index: 1;
+}
+.content {
+  max-width: 800px;
 }
