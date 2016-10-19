@@ -2,7 +2,7 @@
 
     font-family: 'Montserrat Light', sans-serif;
     font-weight: 700;
-    height: 3.125rem;
+    height: 6.25rem;
 
     a {
 
@@ -20,10 +20,40 @@
 
 }
 
+.navbar-brand {
+
+    min-width: 240px;
+
+    &, .logo {
+        .transition(all .3s ease);
+    }
+
+    .smaller & {
+        padding: 1rem 1.25rem;
+    }
+
+}
+
+.logo {
+
+    .smaller & {
+        max-width: 150px;
+    }
+
+}
+
 .navbar, .nav {
     background-color: #fff;
 }
 
 .navbar {
+
     border-bottom: solid 1px @color-border-light;
+
+    .inner {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
 }

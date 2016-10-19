@@ -22,31 +22,33 @@
     <body>
         <header class="header text-xs-center">
             <nav class="navbar navbar-fixed-top p-a-0">
-                <a class="navbar-brand" href="index.html">Team Rocket Logo</a>
+                <div class="container inner">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo img-fluid" src="images/logo-sml.png" alt="Team Rocket"> 
+                    </a>
 
-                <button class="navbar-toggler hidden-md-up text-xs-right" type="button" data-toggle="collapse" data-target="#main-menu">
-                    &#9776;
-                </button>
+                    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#main-menu">
+                        &#9776;
+                    </button>
 
-                <div class="collapse navbar-toggleable-sm" id="main-menu">
-                    <ul class="nav nav-inline">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Our Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Careers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-toggleable-sm" id="main-menu">
+                        <ul class="nav nav-inline">
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Our Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Careers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                
             </nav>
         </header>
 
@@ -55,7 +57,16 @@
             <section class="module bg-white p-y-6">
 
                 <div class="container text-xs-center">
-                    <h1 class="section-title title m-b-0">We craft <span>ideas</span> into digital <span>experiences</span></h1>
+                    <h1 class="section-title title m-b-2">Crafting <span>ideas</span> into digital <span>experiences</span></h1>
+
+                    <p class="cd-headline letters type">
+                        <span>We help people</span> 
+                        <span class="cd-words-wrapper waiting">
+                            <b class="is-visible">stay out of my swamp</b>
+                            <b>finger their cats</b>
+                            <b>browse only the dankest of memes</b>
+                        </span>
+                    </p>
                 </div>
 
             </section>
@@ -183,22 +194,22 @@
 
                         <li class="col-xs-12 col-md-4 m-b-2">
                             <div class="client-wrapper">
-                                <img src="images/clients/sport-wales.svg" alt="Sport Wales" />
-                                <figure class="sport-wales"></figure>
+                                <img src="images/clients/kingspan.svg" alt="Kingspan" />
+                                <figure class="kingspan"></figure>
                             </div>
                         </li>
 
                         <li class="col-xs-12 col-md-4 m-b-2">
                             <div class="client-wrapper">
                                 <img src="images/clients/volvo.svg" alt="Volvo" />
-                                <figure class="sport-wales"></figure>
+                                <figure class="volvo"></figure>
                             </div>
                         </li>
 
                         <li class="col-xs-12 col-md-4 m-b-2">
                             <div class="client-wrapper">
-                                <img src="images/clients/sport-wales.svg" alt="Sport Wales" />
-                                <figure class="sport-wales"></figure>
+                                <img src="images/clients/cbh.svg" alt="Constructing Better Health" />
+                                <figure class="cbh"></figure>
                             </div>
                         </li>
 
@@ -227,6 +238,10 @@
 
                 </div>
 
+            </section>
+
+            <section class="cd-intro">
+                
             </section>
 
             <section class="testimonials module bg-white p-y-3 text-xs-center">
@@ -301,7 +316,7 @@
 
             <section class="contact-info-container module bg-white">
                 <div class="contact-info text-xs-center">
-                    <div class="container m-a-0 p-a-0">
+                    <div class="container">
                         <div class="row">
 
                             <div class="col-xs-12 col-md-4 p-a-0">
@@ -394,9 +409,9 @@
         <script src="js/tether.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTu8Am2BFyRO8jFprLH7RQyRwA9Lvvi0"></script>
-        <!--<script src="https://use.fontawesome.com/d67550b28c.js"></script>-->
         <script src="js/functions.js"></script>
         <script src="js/map.js"></script>
+        <script src="js/headline.js"></script>
 
     </body>
 </html>

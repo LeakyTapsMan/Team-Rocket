@@ -23,31 +23,33 @@
     <body>
         <header class="header text-xs-center">
             <nav class="navbar navbar-fixed-top p-a-0">
-                <a class="navbar-brand" href="index.html">Team Rocket Logo</a>
+                <div class="container inner">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo img-fluid" src="images/logo-sml.png" alt="Team Rocket"> 
+                    </a>
 
-                <button class="navbar-toggler hidden-md-up text-xs-right" type="button" data-toggle="collapse" data-target="#main-menu">
-                    &#9776;
-                </button>
+                    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#main-menu">
+                        &#9776;
+                    </button>
 
-                <div class="collapse navbar-toggleable-sm" id="main-menu">
-                    <ul class="nav nav-inline">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Our Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Careers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-toggleable-sm" id="main-menu">
+                        <ul class="nav nav-inline">
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Our Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Careers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                
             </nav>
         </header>
 
@@ -101,6 +103,17 @@
                 </div>
             </section>
 
+            <section id="cd-google-map" class="module">
+            	<!-- #google-container will contain the map  -->
+            	<div id="google-container"></div>
+            	<!-- #cd-zoom-in and #zoom-out will be used to create our custom buttons for zooming-in/out -->
+            	<div id="cd-zoom-in"></div>
+            	<div id="cd-zoom-out"></div>
+            	<address>
+                    98 Heron Way, Sandbach, CW11 3AU
+                </address>
+            </section>
+
         </main>
 
         <footer class="footer p-y-3 text-xs-center">
@@ -139,6 +152,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTu8Am2BFyRO8jFprLH7RQyRwA9Lvvi0"></script>
         <script src="js/functions.js"></script>
         <script src="js/map.js"></script>
 
