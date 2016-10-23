@@ -7,14 +7,29 @@
     a {
 
         border-bottom: none;
-        color: @color-brand-secondary;
+        color: @color-text-primary;
         font-size: .9rem;
         padding: 1.5rem 1.25rem;
         text-transform: uppercase;
 
         &:hover {
-            color: @color-brand-primary;
+            color: @color-brand-secondary;
+
+            &:after { width: 100%; }
         }
+
+        &:after {
+            background-color: @color-brand-primary;
+            bottom: -2px;
+            content: "";
+            display: block;
+            left: 0;
+            height: 2px;
+            .transition(all .4s cubic-bezier(.35,1,.33,1));
+            width: 0;
+        }
+
+        &.navbar-brand:after { display: none; }
 
     }
 

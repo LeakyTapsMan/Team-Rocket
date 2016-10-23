@@ -80,6 +80,18 @@
     height: 100px;
   }
 }
+.border-list li {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 15px 10px;
+}
+.border-list li + li {
+  border-top: solid 1px;
+}
+.bg-inverse .border-list li {
+  border-color: #313a43;
+}
 /* Titles */
 .title-rule {
   display: table;
@@ -103,6 +115,23 @@
 }
 .title-rule:after {
   right: -25px;
+}
+.title-rule.rule-underline {
+  display: block;
+}
+.title-rule.rule-underline:before {
+  display: none;
+}
+.title-rule.rule-underline:after {
+  margin: 20px 0;
+  position: relative;
+  right: auto;
+}
+.title-sml {
+  font-size: 1.5rem;
+}
+.bg-inverse .title-muted {
+  color: #313a43;
 }
 .rule:after {
   border-top: 1px solid rgba(181, 189, 168, 0.5);
@@ -251,13 +280,33 @@
 }
 .header a {
   border-bottom: none;
-  color: #161d27;
+  color: #414141;
   font-size: .9rem;
   padding: 1.5rem 1.25rem;
   text-transform: uppercase;
 }
 .header a:hover {
-  color: #e84e0e;
+  color: #161d27;
+}
+.header a:hover:after {
+  width: 100%;
+}
+.header a:after {
+  background-color: #e84e0e;
+  bottom: -2px;
+  content: "";
+  display: block;
+  left: 0;
+  height: 2px;
+  -webkit-transition: all 0.4s cubic-bezier(0.35, 1, 0.33, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.35, 1, 0.33, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.35, 1, 0.33, 1);
+  -o-transition: all 0.4s cubic-bezier(0.35, 1, 0.33, 1);
+  transition: all 0.4s cubic-bezier(0.35, 1, 0.33, 1);
+  width: 0;
+}
+.header a.navbar-brand:after {
+  display: none;
 }
 .navbar-brand {
   min-width: 240px;
@@ -289,7 +338,7 @@
   justify-content: space-between;
 }
 .footer {
-  background-color: #3C3C3C;
+  background-color: #161d27;
   bottom: 0;
   color: #fff;
   left: 0;
@@ -660,6 +709,12 @@ ul {
   margin-bottom: 0;
   text-align: center;
 }
+.bg-off-white .bg-title {
+  color: #cccccc;
+}
+.bg-inverse .bg-title {
+  color: #313a43;
+}
 .fg-title {
   color: #161d27;
   display: table;
@@ -668,6 +723,9 @@ ul {
   margin: 0 auto;
   position: relative;
   top: -64px;
+}
+.bg-inverse .fg-title {
+  color: #fff;
 }
 .title {
   font-size: 3.6rem;

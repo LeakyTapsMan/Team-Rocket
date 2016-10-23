@@ -88,6 +88,11 @@ ul {
     line-height: 96px;
     margin-bottom: 0;
     text-align: center;
+
+    .bg-off-white & { color: @color-title-background-grey; }
+
+    .bg-inverse & { color: @color-title-background-inverse; }
+
 }
 
 .fg-title {
@@ -98,6 +103,8 @@ ul {
     margin: 0 auto;
     position: relative;
     top: -64px;
+
+    .bg-inverse & { color: #fff; }
 }
 
 .title {

@@ -6,7 +6,8 @@
     margin: 0 auto;
     position: relative;
 
-    &:before, &:after {
+    &:before,
+    &:after {
         background-color: @color-brand-primary;
         content: "";
         display: block;
@@ -24,6 +25,28 @@
     &:after {
         right: -25px;
     }
+
+    &.rule-underline {
+
+        display: block;
+
+        &:before { display: none; }
+
+        &:after {
+            margin: 20px 0;
+            position: relative;
+            right: auto;
+        }
+
+    }
+
+}
+
+.title-sml { font-size: 1.5rem; }
+
+.title-muted {
+
+    .bg-inverse & { color: @color-title-background-inverse; }
 
 }
 

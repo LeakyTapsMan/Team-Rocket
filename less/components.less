@@ -72,3 +72,20 @@
     }
 
 }
+
+.border-list {
+
+    li {
+        
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+        padding: 15px 10px;
+
+        + li { border-top: solid 1px; }
+
+        .bg-inverse & { border-color: @color-title-background-inverse; }
+
+    }
+
+}
